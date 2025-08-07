@@ -1,0 +1,446 @@
+/* Early Birds Travel & Tours - Custom Styles */
+
+:root {
+  /* Backgrounds - Exact Company Colors */
+  --bg-page: #f0f0f3;           /* Main page background */
+  --bg-card: #ffffff;           /* Product card backgrounds */
+  --bg-subtle: #ffffff;         /* Input fields, subtle areas */
+  --bg-section: #f8f5fa;        /* Section backgrounds */
+  
+  /* Text - Exact Company Colors */
+  --text-primary: #2c3e50;      /* Main headings and content */
+  --text-secondary: #7f8c8d;    /* Supporting text */
+  --text-light:  #b2bec3 ;        /* Captions, timestamps */
+  
+  /* Borders - Exact Company Colors */
+  --border-light:  #f1f1f4;      /* Subtle separators */
+  --border-medium: #d6d6db;     /* Standard borders */
+  --border-strong: #a3a3af;     /* Emphasized borders */
+
+  /* MAIN ACCENT COLORS - Company Brand Colors */
+  --brand-primary: #2C3E50;     /* Main Company coral */
+  --brand-hover: #1A2E40;       /* Hover state */
+  --brand-active: #102536;      /* Active/pressed state */
+}
+
+/* Typography System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+}
+
+/* Display Headlines */
+.display-large { 
+  font-size: 48px; 
+  font-weight: 600; 
+  line-height: 1.08; 
+  letter-spacing: -0.02em; 
+}
+
+.display-medium { 
+  font-size: 40px; 
+  font-weight: 600; 
+  line-height: 1.1; 
+  letter-spacing: -0.02em; 
+}
+
+.display-small { 
+  font-size: 32px; 
+  font-weight: 600; 
+  line-height: 1.125; 
+  letter-spacing: -0.01em; 
+}
+
+/* Headings */
+.heading-1 { 
+  font-size: 26px; 
+  font-weight: 600; 
+  line-height: 1.15; 
+  letter-spacing: -0.005em; 
+}
+
+.heading-2 { 
+  font-size: 22px; 
+  font-weight: 600; 
+  line-height: 1.18; 
+  letter-spacing: -0.02em; 
+}
+
+.heading-3 { 
+  font-size: 19px; 
+  font-weight: 600; 
+  line-height: 1.21; 
+  letter-spacing: -0.02em; 
+}
+
+.heading-4 { 
+  font-size: 16px; 
+  font-weight: 600; 
+  line-height: 1.25; 
+  letter-spacing: -0.02em; 
+}
+
+.heading-5 { 
+  font-size: 14px; 
+  font-weight: 600; 
+  line-height: 1.29; 
+  letter-spacing: -0.02em; 
+}
+
+/* Body text */
+.body-large { 
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 1.5; 
+  letter-spacing: -0.01em; 
+}
+
+.body-medium { 
+  font-size: 14px; 
+  font-weight: 400; 
+  line-height: 1.43; 
+  letter-spacing: -0.005em; 
+}
+
+.body-small { 
+  font-size: 12px; 
+  font-weight: 400; 
+  line-height: 1.33; 
+  letter-spacing: 0; 
+}
+
+.caption { 
+  font-size: 10px; 
+  font-weight: 400; 
+  line-height: 1.2; 
+  letter-spacing: 0.04em; 
+}
+
+/* Component Library */
+
+/* Header - Exact Company Style */
+.marketplace-header {
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.marketplace-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.marketplace-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.marketplace-nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 22px;
+  transition: all 0.2s ease;
+}
+
+.marketplace-nav-link:hover {
+  background: var(--bg-subtle);
+}
+
+/* Cards - Exact Company Style */
+.marketplace-card {
+  background: var(--bg-card);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.marketplace-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+.marketplace-card-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.marketplace-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  color: var(--text-primary);
+}
+
+.marketplace-card-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Primary Buttons - Exact Company Style */
+.btn-primary {
+  background: var(--brand-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 14px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  min-height: 48px !important;
+  text-decoration: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover) !important;
+  transform: scale(1.04);
+}
+
+.btn-primary:active {
+  background: var(--brand-active) !important;
+  transform: scale(0.96);
+}
+
+/* Grid Layout */
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px 24px; /* 40px vertical, 24px horizontal */
+  padding: 24px;
+  max-width: 1760px;
+  margin: 0 auto;
+}
+
+/* Container System */
+.container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 744px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .marketplace-header {
+    padding: 16px;
+    height: 70px;
+  }
+  
+  .marketplace-nav {
+    display: none;
+  }
+  
+  .marketplace-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 16px;
+  }
+  
+  .display-large {
+    font-size: 32px;
+  }
+  
+  .display-medium {
+    font-size: 28px;
+  }
+  
+  .display-small {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1128px) {
+  .marketplace-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px 24px;
+  }
+  
+  .marketplace-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Color classes for consistency */
+.text-brand-primary {
+  color: var(--brand-primary) !important;
+}
+
+.bg-brand-primary {
+  background-color: var(--brand-primary) !important;
+}
+
+.border-brand-primary {
+  border-color: var(--brand-primary) !important;
+}
+
+/* Hero Section Animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroTextAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-content {
+  animation: heroTextAppear 0.8s ease-out 0.2s both;
+}
+
+.hero-controls {
+  animation: slideInFromBottom 0.6s ease-out 0.6s both;
+}
+
+/* Video/Image transition effects */
+.media-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hero button hover effects */
+.hero-btn-ghost {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  transform: translateY(-1px);
+}
+
+/* Scroll indicator animation */
+@keyframes scrollBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -6px, 0);
+  }
+  70% {
+    transform: translate3d(0, -3px, 0);
+  }
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+}
+
+.scroll-indicator {
+  animation: scrollBounce 2s infinite;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
